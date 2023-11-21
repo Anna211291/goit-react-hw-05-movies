@@ -1,5 +1,6 @@
-import { LoaderWrapper } from 'GlobalStyle';
 import { MagnifyingGlass } from 'react-loader-spinner';
+import { LoaderWrapper } from 'GlobalStyle';
+
 
 export const Loader = () => {
   return (

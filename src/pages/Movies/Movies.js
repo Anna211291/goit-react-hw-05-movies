@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import { searchMovies } from 'api';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Searhbar } from 'components/SearchBar/SearchBar';
-import { useEffect, useState } from 'react';
+
 
 export default function Movies() {
   const [moviesItems, setMoviesItems] = useState([]);

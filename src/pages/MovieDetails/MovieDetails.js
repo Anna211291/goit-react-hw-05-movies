@@ -1,8 +1,3 @@
-import { LinksStyle } from 'GlobalStyle';
-import { getMovieById } from 'api';
-import { ErrorMessage } from 'components/ErrorMessage';
-import { Loader } from 'components/Loader/Loader';
-import { MovieCard } from 'components/MovieCard/MovieCard';
 import { Suspense, useEffect, useState } from 'react';
 import {
   Link,
@@ -11,6 +6,11 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom';
+import { getMovieById } from 'api';
+import { LinksStyle } from 'GlobalStyle';
+import { ErrorMessage } from 'components/ErrorMessage';
+import { Loader } from 'components/Loader/Loader';
+import { MovieCard } from 'components/MovieCard/MovieCard';
 import styled from 'styled-components';
 
 const Links = styled(NavLink)`

@@ -1,7 +1,7 @@
-import { getMovieCast } from 'api';
-import { ErrorMessage } from 'components/ErrorMessage';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getMovieCast } from 'api';
+import { ErrorMessage } from 'components/ErrorMessage';
 import { CastImg, MovieCastStyle } from './CastStyled';
 
 export default function Cast() {

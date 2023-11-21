@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import { Toaster } from 'react-hot-toast';
 import { NavLink, Outlet } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import styled from 'styled-components';
 import { NavStyle } from './SharedLayout.styled';
 

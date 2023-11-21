@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import { getMovies } from 'api';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
-import { useEffect, useState } from 'react';
+
 
 export default function Home() {
   const [moviesItems, setMoviesItems] = useState([]);
