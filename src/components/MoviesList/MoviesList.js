@@ -1,5 +1,5 @@
 import { MovieItem } from '../MovieItem/MovieItem';
-import { MoviesListStyle, Title } from './MoviesList.styled';
+import { MoviesListStyle } from './MoviesList.styled';
 
 export const MoviesList = ({ movies }) => {
   return (
