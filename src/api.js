@@ -12,9 +12,9 @@ export const getMovies = async () => {
   return response.data;
 };
 
-export const searchMovies = async (query, page) => {
+export const searchMovies = async (query) => {
   const response = await axios.get(
-    `/search/movie?query=${query}&page=${page}&${params}`
+    `/search/movie?query=${query}&${params}`
   );
   return response.data;
 };

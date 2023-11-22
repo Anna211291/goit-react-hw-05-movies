@@ -3,6 +3,7 @@ import { getMovies } from 'api';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import { Title } from 'components/MoviesList/MoviesList.styled';
 
 
 export default function Home() {
@@ -26,12 +27,14 @@ export default function Home() {
     }
     trendingMovies();
   }, []);
+
   return (
     <main>
       {loading && <Loader />}
       {error && (
         <ErrorMessage>Whoops! Error! Please reload this page!</ErrorMessage>
       )}
+      {moviesItems && <Title>Today's trending...</Title>}
       {moviesItems.length > 0 && <MoviesList movies={moviesItems} />}
     </main>
   );

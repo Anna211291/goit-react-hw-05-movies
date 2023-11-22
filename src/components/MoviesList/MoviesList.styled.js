@@ -13,3 +13,8 @@ export const MoviesListStyle = styled.ul`
   margin-right: auto;
   padding-top: 30px;
 `;
+
+export const Title = styled.h1`
+font-size: 46px;
+text-align: center;
+`;

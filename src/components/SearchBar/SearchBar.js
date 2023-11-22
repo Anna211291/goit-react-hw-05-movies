@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import toast from 'react-hot-toast';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import {
   SearchForm,
@@ -8,35 +6,18 @@ import {
   SearchbarStyle,
 } from './SearchBar.styled';
 
-export const Searhbar = ({ onSubmit }) => {
-  const [query, setQuery] = useState('');
-
-  const handleSearchQuery = evt => {
-    setQuery(evt.target.value.toLowerCase());
-  };
-
-  const handleSubmit = evt => {
-    evt.preventDefault();
-
-    if (query.trim() === '') {
-      toast.success('Please fill out the search field');
-      return;
-    }
-
-    onSubmit(query);
-  };
+export const Searhbar = ({ onSubmit, onChange }) => {
 
   return (
     <SearchbarStyle>
-      <SearchForm onSubmit={handleSubmit}>
+      <SearchForm onSubmit={onSubmit}>
         <SearchFormInput
           name="query"
           type="text"
           autoComplete="off"
           autoFocus
           placeholder="Search movie..."
-          onChange={handleSearchQuery}
-          value={query}
+          onChange={onChange}
         />
         <SearchFormBtn type="submit">
           <BiSearchAlt2 size={32} />

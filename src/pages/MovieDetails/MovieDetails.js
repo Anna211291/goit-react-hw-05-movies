@@ -54,16 +54,20 @@ export default function MovieDetails() {
 
   return (
     <main>
-      <Link to={location.state?.from ?? '/movies'}>Back Link</Link>
+      <Link to={location.state?.from ?? '/'}>Back Link</Link>
       {loading && <Loader />}
       {error && <ErrorMessage />}
       {movie && <MovieCard movie={movie} />}
       <LinksStyle>
         <li>
-          <Links to="cast">Cast</Links>
+          <Links to="cast" state={{ from: location?.state?.from ?? '/' }}>
+            Cast
+          </Links>
         </li>
         <li>
-          <Links to="reviews">Reviews</Links>
+          <Links to="reviews" state={{ from: location?.state?.from ?? '/' }}>
+            Reviews
+          </Links>
         </li>
       </LinksStyle>
       <Suspense fallback={<Loader />}>
