@@ -8,14 +8,12 @@ const params = new URLSearchParams({
 });
 
 export const getMovies = async () => {
-  const response = await axios.get(`/trending/movie//day?${params}`);
+  const response = await axios.get(`/trending/movie/day?${params}`);
   return response.data;
 };
 
-export const searchMovies = async (query) => {
-  const response = await axios.get(
-    `/search/movie?query=${query}&${params}`
-  );
+export const searchMovies = async query => {
+  const response = await axios.get(`/search/movie?query=${query}&${params}`);
   return response.data;
 };
 
